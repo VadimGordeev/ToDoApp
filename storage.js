@@ -11,6 +11,7 @@ class TaskStorage {
         this.addTask = (task) => {
             const newTask = {
               text: task,
+              done: false, 
               id: window.crypto.randomUUID()
             }
 
@@ -40,5 +41,29 @@ class TaskStorage {
             
             return tasks.slice
         }
+
+        this.completeTask = (taskId) => {
+            const indexToComplete = tasks.findIndex(({ id }) => id === taskId);
+            tasks.forEach((task, index) => {
+            if(index === indexToComplete){
+                task.done = !task.done
+            }
+          });
+
+          localStorage.setItem(LocalStorageKey.Tasks, JSON.stringify(tasks));
+            return tasks.slice();
+          }
+
+          this.undoCompleteTask = (taskId) => {
+            const indexToUncomplete = tasks.findIndex(({ id }) => id === taskId);
+            tasks.forEach((task, index) => {
+            if(index === indexToUncomplete){
+                task.done = !task.done
+            }
+          });
+
+          localStorage.setItem(LocalStorageKey.Tasks, JSON.stringify(tasks));
+            return tasks.slice();
+          }
     } 
 }

@@ -22,7 +22,7 @@ h1 {
 main {
     margin: 56px 0px;
     box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.15);
-    width: 65%;
+    width: 80%;
     border-radius: 32px;
     display: flex;
     flex-direction: column;
@@ -71,6 +71,7 @@ main {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    margin-top: 36px;
 }
 .card {
     width: 100%;
@@ -80,7 +81,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 68px;
+    margin-top: 32px;
     order: 2;
 }
 .complete {
