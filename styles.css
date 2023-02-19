@@ -71,7 +71,6 @@ main {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin-top: 36px;
 }
 .card {
     width: 100%;
@@ -117,4 +116,54 @@ main {
 .btn_del {
     background: #C80D0D;
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 360px) {
+    main {
+        width: 100%;
+    }
+    .container {
+        padding: 28px 0px;
+    }
+    .card_header {
+        flex-direction: column;
+        height: 112px;
+    }
+    .card_header_input{
+        width: 100%;
+        height: 52px;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 12px;
+    }
+    .card_header_btn {
+        width: 100%;
+        height: 44px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .card {
+        width: 100%;
+        height: 154px;
+        display: flex;
+        flex-wrap: wrap;
+        order: 2;
+    }
+    .card p {
+        width: 90%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 10px 0px 10px 10px;
+    }
+    .card button {
+        width: 40%;
+        height: 43px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .complete {
+        order: 1;
+    }
 }
